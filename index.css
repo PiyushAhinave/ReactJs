@@ -1,4 +1,10 @@
+/*for ID use #*/
 #heading{
+    background-color: black;
+    color: aquamarine;
+}
+/*for Class use . for css*/
+.heading{
     background-color: black;
     color: aquamarine;
 }
