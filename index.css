@@ -18,7 +18,7 @@
     height: 40px;
 }
 .list{
-    
+    display: flex;
     color: #14a5b9;
 }
 
@@ -33,8 +33,11 @@
 .searchbar{
     text-align: center;
     margin-top: 15px;
+    display: flex;
 }
-
+.search{
+    margin-right: 15px;
+}
 /* Restaurant div */
 .rescard{
     width: 200px;
@@ -67,4 +70,17 @@
     display: flex;
     flex-wrap: wrap;
     padding:5px;
+}
+
+.shimmer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-box{
+    background-color:#f0f0f0;
+    border: 1px solid black;
+    width: 200px;
+    height: 400px;
+    margin: 10px;
 }
