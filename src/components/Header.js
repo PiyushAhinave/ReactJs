@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -10,12 +11,21 @@ const Header = () => {
  
          <div className="list">
              <ul>
-                 <li>Home</li>
-                 <li>About Us</li>
-                 <li>Contact Us</li>
+                 <li className="li">
+                    <Link to="/">Home</Link>
+                </li>
+                 <li className="li">
+                    <Link to="/aboutus"> About Us </Link>
+                </li>
+                 <li className="li">
+                    <Link to="/contact"> Contact Us </Link>
+                </li>
                  <li>Cart</li>
+                 <li>
+                    
+             <button className="login" onClick={() => {return btnName==="Login"? setbtnName("logout"):setbtnName("Login")}}>{btnName}</button> 
+                 </li>
              </ul>
-             <button onClick={() => {return btnName==="Login"? setbtnName("logout"):setbtnName("Login")}}>{btnName}</button> 
          </div>
  
      </div>

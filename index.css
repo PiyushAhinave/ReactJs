@@ -30,6 +30,10 @@
     
 }
 
+.li{
+    text-decoration: none;
+}
+
 .searchbar{
     text-align: center;
     margin-top: 15px;
@@ -84,3 +88,5 @@
     height: 400px;
     margin: 10px;
 }
+
+

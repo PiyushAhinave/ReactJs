@@ -1,6 +1,7 @@
 import ResCard from "./ResCard.js";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [restList, setrestList] = useState([]);
@@ -44,7 +45,7 @@ const Body = () => {
         {/* <ResCard resData={resData}/>  we used this for taking value by passing object*/}
         {/* {<ResCard {...resData}/>}  this used to pass value directly*/}
         {filterList.map((restaurant) => (
-          <ResCard key={restaurant.info.id} resData={restaurant} />
+          <Link to={"/restaurantmenu/"+restaurant.info.id}><ResCard key={restaurant.info.id} resData={restaurant} /></Link>
         ))}
       </div>
     </div>
