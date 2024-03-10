@@ -6,7 +6,7 @@ import { MenuApi } from "../utils/Constants.js";
 const RestaurantMenu = () => {
 
     const[resInfo,SetResInfo]=useState(null);
-
+    console.log(resInfo);
     const {resId} = useParams();
 
     useEffect(()=>{fetchdata()},[]);
