@@ -2,11 +2,13 @@ import ResCard from "./ResCard.js";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
   const [restList, setrestList] = useState([]);
   const [searchText,setSearchText]= useState("");
   const [filterList,setFilterList]= useState([]);
+  const onlineStatus = useOnlineStatus();
   
   useEffect(
     () => {fetchdata()},[]
@@ -17,11 +19,12 @@ const Body = () => {
     setrestList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     setFilterList(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
   };
-
+/*
   if (restList.length == 0){
     return <Shimmer/>
   }
-
+ */ 
+ if (onlineStatus === false) return <h1>You are offline please check internet connection!!!</h1>;
   return (
     <div className="body">
       <div className="searchbar">
