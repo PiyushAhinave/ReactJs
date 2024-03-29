@@ -16,7 +16,7 @@ class AboutUs extends Component{
     return (
         <div>
             <h1>About Us</h1>
-            <UserClass name={"Piyush from class component"} location={"pune class"} number={"998877665"}/>
+            <UserClass login={"Piyush from class component"} id={"pune class"} url={"998877665"}/>
         </div>
         
     )

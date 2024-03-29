@@ -5,16 +5,16 @@ class UserClass extends React.Component{
 
         this.state={
             userInfo:{
-                Name:"Piyush",
-                ID:"Default",
-                Url:"shjdkkkdjdkh",
+                login:"Piyush",
+                id:"Default",
+                url:"shjdkkkdjdkh",
             }
         }
 
-
+       
         //console.log("child constructor");
     };
-
+    
     async componentDidMount(){
         const data = await fetch("https://api.github.com/users/PiyushAhinave");
         const json = await data.json();
@@ -46,4 +46,5 @@ class UserClass extends React.Component{
         )
     }
 }
+
 export default UserClass;
